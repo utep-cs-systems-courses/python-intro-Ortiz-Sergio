@@ -14,7 +14,11 @@ def wordCount(file):
                 else:
                     hash_table[current_word] = 1
                 current_word = ''
-    print(hash_table)
+
+    output_file = open("output.txt", "w")
+
+    cur_file.close()
+    output_file.close()
 
 
 file = input("What file would you like to read? ")
