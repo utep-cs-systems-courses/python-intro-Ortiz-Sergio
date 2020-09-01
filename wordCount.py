@@ -16,6 +16,9 @@ def wordCount(file):
                 current_word = ''
 
     output_file = open("output.txt", "w")
+    for key in sorted(hash_table.keys()):
+        output_file.write(key+" "+str(hash_table[key])+"\n")
+        #Formats it in the way the key text files are
 
     cur_file.close()
     output_file.close()
