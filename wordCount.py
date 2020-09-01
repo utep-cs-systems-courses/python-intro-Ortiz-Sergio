@@ -23,7 +23,13 @@ def wordCount(file):
     cur_file.close()
     output_file.close()
 
+def rmFirstLine():
+    with open("output.txt", "r") as file:
+        data = file.read().splitlines(True)
+    with open("output.txt", "w") as file_out:
+        file_out.writelines(data[1:])
+
 
 file = input("What file would you like to read? ")
-#We will store the users file in this string
 wordCount(file)
+rmFirstLine() #For some reason I had a weird first line
