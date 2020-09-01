@@ -1,4 +1,11 @@
+import os.path
+from os import path
+
 def wordCount(file):
+    if not path.exists(file):
+        print("file does not exist, enter a valid file")
+        return False
+        
     cur_file = open(file)
     hash_table ={}
 
@@ -22,6 +29,7 @@ def wordCount(file):
 
     cur_file.close()
     output_file.close()
+    return True
 
 def rmFirstLine():
     with open("output.txt", "r") as file:
@@ -31,5 +39,5 @@ def rmFirstLine():
 
 
 file = input("What file would you like to read? ")
-wordCount(file)
-rmFirstLine() #For some reason I had a weird first line
+if wordCount(file):
+    rmFirstLine() #For some reason I had a weird first line
