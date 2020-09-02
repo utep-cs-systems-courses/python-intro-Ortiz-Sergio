@@ -28,3 +28,18 @@ Note that there are two major dialects of Python.  Python 3.* is
 incompatible with 2*.  As a result, Python 2.7 remains popular.  All
 of our examples were ported to 3.* during the summer of 2018.  We (mildly)
 encourage students to use that dialect of Python.
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+My solution for this lab can be found in the wordCount.py file. To execute
+it, run python3 wordCount.py <input text file> <output text file>
+
+My implementation runs through the input text file and creates a hash map that
+contains as keys the words and as values the number of instances of these
+words. Then, it sorts the keys and writes them down into the output text file
+in the following format:
+
+key value
+
+Note: For some reason my implementation was writing a numeric value on the
+first line of the output file. I could not get to the bottom of this, so I
+simply removed the first line of the file after writing everything onto it. 
